@@ -41,6 +41,21 @@
 
                         <div class="row mb-3">
                             <div class="col-md-6 offset-md-4">
+                            <!-- Capture -->
+
+                            <!-- {!! NoCaptcha::renderJs() !!}
+                            {!! NoCaptcha::display() !!} -->
+
+                            <!-- Capture Error -->
+                            <!-- @if ($errors->has('g-recaptcha-response'))
+                                <span class="help-block">
+                                    <strong style="color:blue">{{ $errors->first('g-recaptcha-response') }}</strong>
+                                </span>
+                            @endif -->
+                            <!-- End Capture Error -->
+        
+                            <!-- End Capture -->
+
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
