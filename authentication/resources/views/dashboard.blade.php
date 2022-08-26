@@ -27,7 +27,9 @@
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            {{Auth::user()->name}}
+            @if(Auth::check())
+              {{Auth::user()->name}}
+            @endif
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{{ route('logout') }}"
@@ -93,11 +95,11 @@
     <!--###################End Card#####################-->
 
 
-    <!-- ##################3############################-->
+    <!-- ################## footer ############################-->
 
 
 
-    <!-- ##################end 3 #######################-->
+    <!-- ##################end footer #######################-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
